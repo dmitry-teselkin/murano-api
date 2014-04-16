@@ -13,14 +13,14 @@ OpenStack Lab Preparation
 #########################
 
 For Murano to work with OpenStack lab the following conditions must be met:
-* RabbitMQ account 'guest' with administrator privileges must exist.
-* OpenStack tenant 'service' must exist.
-* OpenStack user 'murano' with administrator role must exists and be a member of 'service' tenant.
+   * RabbitMQ account 'guest' with administrator privileges must exist.
+   * OpenStack tenant 'service' must exist.
+   * OpenStack user 'murano' with administrator role must exists and be a member of 'service' tenant.
 
 The following data is required to setup Murano devbox:
-* OpenStack Lab IP address (let's name it **%openstack_host_ip%**)
-* OpenStack Lab 'murano' account password (let's name it **%murano_admin_password%**)
-* RabbitMQ 'guest' account password (let's name it **%rabbit_guest_password%**)
+   * OpenStack Lab IP address (let's name it **%openstack_host_ip%**)
+   * OpenStack Lab 'murano' account password (let's name it **%murano_admin_password%**)
+   * RabbitMQ 'guest' account password (let's name it **%rabbit_guest_password%**)
 
 Check OpenStack Lab
 *******************
