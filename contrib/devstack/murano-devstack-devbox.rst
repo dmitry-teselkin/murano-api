@@ -13,11 +13,13 @@ OpenStack Lab Preparation
 #########################
 
 For Murano to work with OpenStack lab the following conditions must be met:
+
    * RabbitMQ account 'guest' with administrator privileges must exist.
    * OpenStack tenant 'service' must exist.
    * OpenStack user 'murano' with administrator role must exists and be a member of 'service' tenant.
 
 The following data is required to setup Murano devbox:
+
    * OpenStack Lab IP address (let's name it **%openstack_host_ip%**)
    * OpenStack Lab 'murano' account password (let's name it **%murano_admin_password%**)
    * RabbitMQ 'guest' account password (let's name it **%rabbit_guest_password%**)
@@ -38,11 +40,15 @@ Check OpenStack users and tenants
 =================================
 
 1. Open your openstack dashboard and login as user with 'admin' priveleges.
+
 2. Navigate to 'Admin' -> 'Projects' and check if a project with name 'service' exists. If not - create it:
+
     * Click the button button '+ Create Project'.
     * Set new project's name.
     * Click 'Create Project'.
+
 3. Navigate to 'Admin' -> 'Users' and check if a user with name 'murano' exists. If not - create it:
+
     * Click the button '+ Create User'.
     * Set 'User name' = 'murano'.
     * Set 'Email' = 'murano@example.com'.
@@ -54,11 +60,9 @@ Check OpenStack users and tenants
 Murano Devbox Installation
 **************************
 
-.. note::
+**NOTE**
 
     In this guide it is assumed that you already have a box prepared for devstack.
-
-..
 
 Clone **murano-api** from https://github.com/stackforge/murano-api.git and copy all files from 'contrib/devstack' to your local devstack repository. Then, create a 'local.conf' config file (see example below). Configure all variables marked.
 
