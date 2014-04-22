@@ -124,6 +124,7 @@ Config file example:
     # Enable Murano services
     enable_service murano
     enable_service murano-api
+    enable_service murano-engine
     enable_service murano-dashboard
 
     # Murano configuration variables
