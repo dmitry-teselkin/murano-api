@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# To execute this script without cloning the entire repository, use the command below:
+# wget https://raw.githubusercontent.com/dmitry-teselkin/murano-api/murano-devbox-guide/contrib/devstack/kickstack.sh -O - | bash
+
 set -o errexit
 set -o xtrace
 
