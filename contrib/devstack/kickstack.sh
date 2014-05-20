@@ -42,7 +42,7 @@ git_clone "$MURANO_GIT_URL" "$MURANO_BRANCH"
 
 cp -r murano-api/contrib/devstack/{extras.d,files,lib} ./devstack
 
-cat << EOF > ./devstack/local.conf
+cat << 'EOF' > ./devstack/local.conf
 [[local|localrc]]
 
 # IP address of OpenStack node
