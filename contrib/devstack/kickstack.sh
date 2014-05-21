@@ -90,6 +90,12 @@ enable_service mysql
 enable_service horizon
 #-------------------------
 
+# Custom branches
+#----------------
+# Murano doesn't work with python-heatclient from 'master'.
+# Version 0.2.6 couldn't be installed by devstack, so let's use 0.2.7
+HEATCLIENT_BRANCH=0.2.7
+#----------------
 
 # MURANO SETTINGS BLOCK start
 #----------------------------
