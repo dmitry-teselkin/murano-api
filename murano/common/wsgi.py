@@ -392,10 +392,6 @@ class Resource(object):
         except AttributeError:
             method = getattr(obj, 'default')
 
-        print(method)
-        print(args)
-        print(kwargs)
-
         return method(*args, **kwargs)
 
     def get_action_args(self, request_environment):
@@ -730,7 +726,7 @@ class TextDeserializer(ActionDispatcher):
 
 class BlankDeserializer(TextDeserializer):
     def default(self, request):
-        return {'body': '{}'}
+        return {'body': {}}
 
 
 class JSONDeserializer(TextDeserializer):
