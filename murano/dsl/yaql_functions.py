@@ -23,6 +23,9 @@ import murano.dsl.exceptions as exceptions
 import murano.dsl.helpers as helpers
 import murano.dsl.murano_object as murano_object
 
+from murano.openstack.common import log as logging
+
+LOG = logging.getLogger(__name__)
 
 def _resolve(name, obj):
     @yaql.context.EvalArg('this', murano_object.MuranoObject)
@@ -142,6 +145,11 @@ def _type(value):
     return value.type.name
 
 
+@yaql.context.EvalArg('value', str)
+def _debug_print(value):
+    LOG.debug('DEBUG_PRINT: {0}'.format(value))
+
+
 def register(context):
     context.register_function(_resolve, '#resolve')
     context.register_function(_cast, 'cast')
@@ -154,3 +162,4 @@ def register(context):
     context.register_function(_get_container, 'find')
     context.register_function(_sleep, 'sleep')
     context.register_function(_type, 'type')
+    context.register_function(_debug_print, 'debugPrint')
